@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        ShowTrackr
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css" type="text/css">
+
+    <script src="JavaScript.js"> </script>
+
+    
+
+</head>
+<body>
+    <nav class="navbar navbar-default shadow" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html" id="show">Show<b>Trackr</b> </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="add"><a href="add.html">Add</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="list"><a id="universal"></a></li>
+                <li class="list"><a href="login.html">Login</a></li>
+                <li class="list active"><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="checkr" id="login_container_1">
+        <div class="login-container">
+            <h2>Sign up</h2>
+            <form  action="signup.html">
+
+
+                <div class="form-group inner-addon left-addon">
+                    <i class=' glyphicon glyphicon-user'></i>
+                    <input type="text" class="form-control" placeholder="Name" id="user1" oninput="name_validation()" required />
+                    <p class="validation_bar" id="validation_n"></p>
+                </div>
+
+                <div class="form-group inner-addon left-addon">
+                    <i class=' glyphicon fas fa-at'></i>
+                    <input type="email" class="form-control" placeholder="Email" id="email" oninput="myFunction()" required/>
+                    <p class="validation_bar" id="validation_e"></p>
+                </div>
+
+                <div class="form-group inner-addon left-addon">
+                    <i class="glyphicon fas fa-key"></i>
+                    <input type="password" class="form-control pwd_t" id="pwd" placeholder="Password" name="pwd" oninput="password_validation()" required />
+                    
+                    <hr class="password_valid " id="password_color_valid" />
+                    <p class="validation_bar" id="validation_p"></p>
+                </div>
+                
+                    <div ><i id="show_eye" class="glyphicon glyphicon-eye-open show " onclick="show()" ></i></div>
+                <div class="condition">
+                    <label>by clicking on signup, you agree to <a> terms & conditions </a>and <a>privacy policy</a></label>
+                </div>
+                <input type="submit"  class="btn btn-default btn_signup form-group" value="Sign up" onclick="signupFunc()">
+                
+                <div class="label2 label_signup">
+                    <label>Already have an account?</label>
+                    <span><a href="login.html">Log in</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

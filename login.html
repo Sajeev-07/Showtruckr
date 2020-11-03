@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        ShowTrackr
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style1.css" type="text/css">
+    
+    <script src="JavaScript.js"> </script>
+
+</head>
+<body>
+
+    
+
+    <nav class="navbar navbar-default shadow" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html" id="show">Show<b>Trackr</b> </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="add"><a href="add.html">Add</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="list"><a id="universal"></a></li>
+                <li class="list active"><a href="login.html">Login</a></li>
+                <li class="list"><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="checkr" id="login_container_1">
+        <div class="login-container">
+            <h2>Log in</h2>
+            <form action="/action_page.php" class=" needs-validation" novalidate>
+
+                <div class="form-group inner-addon left-addon email_txtbx">
+                    <i class=' glyphicon fas fa-at'></i>
+                    <input type="text" class="form-control email " id="email" oninput="checkmail()" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninput="myFunction()" required />
+                    <p class="validation_bar" id="validation_e"></p>
+                </div>
+
+                <div class="form-group inner-addon left-addon">
+                    <i class="glyphicon fas fa-key"></i>
+                    <input type="password" class="form-control " id="pwd" placeholder="Password" name="pwd" oninput="login_validation()" required />
+                    <p class="validation_bar" id="validation_p"></p>
+                </div>
+
+                <input type="button" class="btn btn-default btn_login form-group" onclick="login()" value="Log in">
+                <div class="forgot_password">
+                    <label>Forgot your password?</label>
+                </div>
+                <div class="label2 ">
+                    <label>Don't have an account yet?</label>
+                    <span><a href="signup.html">Sign up</a></span>
+                </div>
+
+                <div class='hr-or'></div>
+
+                <div class="form-group inner-addon left-addon btn_facebook_div">
+                    <i class=' glyphicon fa fa-facebook fbtn_logo'></i>
+                    <input type="button" class="btn btn-default btn_facebook form-group" value="Sign in with Facebook">
+                </div>
+
+                <div class="form-group inner-addon left-addon btn_google_div">
+                    <i class=' glyphicon fa fa-google-plus gbtn_logo'></i>
+                    <input type="button" class="btn btn-default btn_google form-group" value="Sign in with Google">
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

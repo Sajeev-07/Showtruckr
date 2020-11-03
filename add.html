@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        ShowTruckr
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <script>
+            function myfunc(){
+                var val = document.getElementById("movie");
+                var letters = /^[A-Za-z]+$/;
+
+                if(val.value.match(letters)){
+                    document.getElementById("demo").style.color="green";
+
+                    document.getElementById("demo").innerHTML= val.value+" " + "Has been added";
+                }
+
+                else{
+                    document.getElementById("demo").style.color= "red";
+
+                    document.getElementById("demo").innerHTML= " Invalid TV Show Name";
+                }
+            }
+
+
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default shadow" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="nav1 navbar-brand" href="index.html" id="show">Show<b>Trackr</b> </a>
+            </div>
+            <ul class="nav nav1 navbar-nav">
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="add active"><a href="add.html">Add</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="list"><a href="login.html">Login</a></li>
+                <li class="list"><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="panel">
+            <div class="panel-heading panel-default"><b>ADD TV SHOWS</b></div>
+            <div class="row" id="row">
+                <form>
+                    <div class="form-group">
+                        <label for="usr">Name:</label>
+                        <input type="text" class="form-control" placeholder="Enter TV show name" id="movie">
+                        <br>
+                        <p id="demo" style="margin-left: auto;"></p>
+                        <input type="button" class="btn1 btn-primary" value="Add" onclick="myfunc()" >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
